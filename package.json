@@ -1,0 +1,33 @@
+{
+  "name": "discord-template",
+  "version": "1.0.0",
+  "description": "The perfect start for a bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.14.0",
+    "@discordjs/rest": "^0.5.0",
+    "discord.js": "^13.9.0",
+    "dotenv": "^16.0.1",
+    "fs": "^0.0.1-security",
+    "g-i-s": "^2.1.6",
+    "i": "^0.3.7",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "npm": "^8.14.0",
+    "pg": "^8.7.3",
+    "request": "^2.88.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artemcashov/discordjs-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/artemcashov/discordjs-template/issues"
+  },
+  "homepage": "https://github.com/artemcashov/discordjs-template#readme"
+}
