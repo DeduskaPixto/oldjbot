@@ -2,7 +2,7 @@ const { Interaction, Client, MessageEmbed, MessageActionRow, MessageButton, Mess
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 const name = "работать";
-const description = "Задержка бота олдж";
+const description = "Работа олдж";
 
 module.exports = {
   name: name, // имя команды
