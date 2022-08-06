@@ -34,8 +34,7 @@ module.exports = {
         ephemeral: true
       })
     }
-    client.db.query("SELECT * FROM `users` WHERE `ID` = '"+user+"'", async function (error, results) {
-      let timestamp;        
+    client.db.query("SELECT * FROM `users` WHERE `ID` = '"+user+"'", async function (error, results) {        
       if(results == null) {
         client.db.query("INSERT INTO `users` (`ID`) VALUES ('"+command.member.id+"');")
         return command.reply({
@@ -43,35 +42,15 @@ module.exports = {
           ephemeral: true
         })
       }
-      if (results[0]["voice"] != undefined) {
-       timestamp = results[0]["voice"];
-      }
-      else {
-       client.db.query("UPDATE `users` SET `voice` = 0 WHERE `users`.`ID` = '"+command.member.id+"';"), async function (error, results) {
-        if(error) console.log(error)
-        return command.reply({
-          content: "Мы видим вас впервые! Повторите попытку ещё раз, чтобы бот загрузил информацию о вас!",
-          ephemeral: true
-        })
-       }
-      }
+      let timestamp = results[0]["voice"];
       let hours = Math.floor(timestamp / 60 / 60);
       let minutes = Math.floor(timestamp / 60) - (hours * 60);
       let seconds = timestamp % 60;
-      if (seconds != NaN) {
       var voice = [
         hours.toString().padStart(2, '0'),
         minutes.toString().padStart(2, '0'),
         seconds.toString().padStart(2, '0')
-      ].join(':'); }
-      else {
-        client.db.query("UPDATE `users` SET `voice` = 0 WHERE `users`.`ID` = '"+command.member.id+"';"), async function (error, results) {
-          if(error) console.log(error)
-          return command.reply({
-            content: "Мы видим вас впервые! Повторите попытку ещё раз, чтобы бот загрузил информацию о вас!",
-            ephemeral: true
-          })
-      }
+      ].join(':');
       let roles = ""
       let rolesArray = results[0]["buyroles"]?.split(",")
       let description = results[0]["description"]
@@ -132,7 +111,7 @@ module.exports = {
 
       command.reply(msg)
 
-    }})
+    })
   },
 
   componentListener(client, interaction) {
