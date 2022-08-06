@@ -132,7 +132,7 @@ module.exports = {
 
       command.reply(msg)
 
-    })
+    }})
   },
 
   componentListener(client, interaction) {
