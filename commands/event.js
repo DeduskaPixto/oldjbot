@@ -238,7 +238,7 @@ module.exports = {
         if (interaction.customId == 'garticphoneModal') {
             const game = interaction.fields.getTextInputValue('linkGartic');
             interaction.guild.channels.cache.get(Config.event_channel).send({
-                content: `<@&${Config.roles.gartic}>`,
+                content: `@here`,
                 embeds: [{
                     title: `Прямо сейчас идёт ивент по Gartic Phone!`,
                     description: `Заходим в [игру](${game}) и играем!`,
@@ -296,7 +296,7 @@ module.exports = {
                 var msgp = ""
                 setTimeout(() => {
                     interaction.guild.channels.cache.get(Config.event_channel).send({
-                        content: `<@&${Config.roles.jackbox}> Ивент начался!`
+                        content: `@here Ивент начался!`
                     }).then(message => {
                         msgp = message
                     })
@@ -350,7 +350,7 @@ module.exports = {
             else {
                 let messageId = ""
                 interaction.guild.channels.cache.get(Config.event_channel).send({
-                    content: `<@&${Config.roles.jackbox}>`,
+                    content: `@here`,
                     embeds: [{
                         title: `Прямо сейчас идёт ивент по Jackbox!`,
                         description: `Заходим на [стрим](https://discord.gg/qcsG3C9Z5m) и играем!`,
@@ -489,7 +489,7 @@ module.exports = {
                     var msgp = ""
                     setTimeout(() => {
                         interaction.guild.channels.cache.get(Config.event_channel).send({
-                            content: `<@&${Config.roles.film}> Ивент начался!`
+                            content: `@here Ивент начался!`
                         }).then(message => {
                             msgp = message
                         })
@@ -579,7 +579,7 @@ module.exports = {
                 var msgp = ""
                 setTimeout(() => {
                     interaction.guild.channels.cache.get(Config.event_channel).send({
-                        content: `<@&${Config.roles.other}> Ивент начался!`
+                        content: `@here Ивент начался!`
                     }).then(message => {
                         msgp = message
                     })
@@ -630,7 +630,7 @@ module.exports = {
                 }
                 let messageId = ""
                 interaction.guild.channels.cache.get(Config.event_channel).send({
-                    content: `<@&${Config.roles.other}>`,
+                    content: `@here`,
                     embeds: [embed]
                 }).then ((message) => {
                     messageId = message.id
