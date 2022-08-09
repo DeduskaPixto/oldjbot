@@ -279,7 +279,7 @@ module.exports = {
             var dtEvent = interaction.fields.getTextInputValue('annonce') ?? null
             if(dtEvent) {
                 dtEvent = dtEvent.split(":")
-                let hours = new Date().getHours()+3
+                let hours = new Date().getHours()
                 let minutes = new Date().getMinutes()
                 let hoursEvent = dtEvent[0]
                 let minutesEvent = dtEvent[1]
