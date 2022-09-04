@@ -115,7 +115,7 @@ module.exports = {
         .setLabel("Имя роли")
         .setRequired(true)
         .setStyle('SHORT');
-         const description = new TextInputComponent()
+        const description = new TextInputComponent()
         .setCustomId('description')
         .setLabel("Описание роли")
         .setRequired(true)
